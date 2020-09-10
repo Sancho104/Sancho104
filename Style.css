@@ -1,0 +1,81 @@
+header{
+  height: 1045px;
+  overflow: hidden;
+  background-image: url(Rectangle.png);
+  display: grid;
+  grid-template-columns: 7.81% 64% 28.19%;
+  grid-template-rows:  150px;
+}
+.top-menu {
+
+  
+  height: 15%;
+}
+.list-menu li a {
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: Open Sans Condensed;
+  margin: 0px 10px;
+  color: white;
+  text-align: right;
+  text-decoration-line: none;
+}
+.list-menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 51px;
+  
+}
+.left-information {
+  grid-row: 1 / 3;
+  height: 1045px;
+
+  background: rgba(51, 51, 51, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  max-height: 1045px;
+}
+.left-information img {
+width: 30%;
+
+}
+.left-information span {
+  transform: rotate(-90deg);
+  color: white;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.left-information hr {
+  position: relative;
+  top: 50px;
+  color: white;
+  height: 100px;
+}
+.left-information img, span {
+  margin: 100px 0px;
+}
+.telephon {
+  margin-top: 51px;
+}
+.telephon span {
+  border-bottom: 1px solid gold;
+  color: white;
+}
+
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+}
+.header-content .img-header img {
+  height: 245px;
+  width: auto;
+}
