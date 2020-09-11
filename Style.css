@@ -3,7 +3,7 @@ header{
   overflow: hidden;
   background-image: url(Rectangle.png);
   display: grid;
-  grid-template-columns: 7.81% 64% 28.19%;
+  grid-template-columns: 7.81% auto auto;
   grid-template-rows:  150px;
 }
 .top-menu {
@@ -72,10 +72,145 @@ width: 30%;
 
 
 .header-content {
+  grid-column: 2 / span 2;
   display: flex;
   flex-direction: row;
+  width: 80%;
 }
-.header-content .img-header img {
-  height: 245px;
+.text-header {
+  width: 60%;
+  margin: 100px 100px;
+  color: white;
+}
+.header-content > div > button {
+  width: 112px;
+  height: 35px;
+  background: #D1A954;
+  color: white;
+  border: none;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.header-content .img-header > img {
+  height: 450px;
   width: auto;
+  box-shadow: 10px 10px 10px;
+}
+#a {
+  padding-right: 30px;
+}
+#b {
+  transform: rotate(180deg);
+  padding-right: 30px;
+}
+.button-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+}
+.button-image button {
+  background: inherit;
+  border: none;
+  height: 30px;
+  width: 140px;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+}
+.button-image button img {
+  width: 40px;
+  height: 10px;
+}
+
+main {
+  background: #333333;
+
+}
+.inf-about {
+  display: grid;
+  grid-template-columns: 35% auto auto;
+  width: ;
+  justify-content: center;
+  margin: auto;
+  width: 70%;
+  grid-column-gap: 30px;
+}
+.heading {
+  grid-column: 1 / span 3;
+  font-size: 40px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.heading span {
+  color: #D1A954;
+}
+.best-teatr {
+  color: white;
+}
+.best-head {
+  font-size: 18px;
+}
+#c {
+  font-size: 18px;
+}
+.numeral span {
+  color: #D1A954;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.numeral p {
+  color: white;
+}
+.numeral img {
+  display: block;
+}
+.image-gallery p {
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+.image-gallery p > span {
+  color: #D1A954;
+}
+.image-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+}
+.image-container a {
+  margin: 0 1px;
+}
+@media (max-width:1310px) {
+  .image-container {
+    grid-template-columns: auto auto;
+  }
+}
+.image-container-text {
+  position: relative;
+}
+.image-container-text span {
+  position: absolute;
+}
+#d {
+  top: -80px;
+  left: 20px;
+  color: white;
+}
+#e {
+  transform: rotate(-90deg);
+  bottom: -40px;
+  left: -20px;
+  color: white;
 }
