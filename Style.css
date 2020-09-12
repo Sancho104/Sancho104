@@ -1,7 +1,7 @@
 header{
   height: 1045px;
   overflow: hidden;
-  background-image: url(Rectangle.png);
+  background-image: url(Photo/Rectangle.png);
   display: grid;
   grid-template-columns: 7.81% auto auto;
   grid-template-rows:  150px;
@@ -240,13 +240,13 @@ main, footer {
 .critics {
   background-image: url(Photo/Rectangle28.png);
   margin: 150px auto 0 auto;
-  width: 50%;
+  width: 60%;
   display: grid;
   grid-template-columns: 35% auto;
-  height: 300px;
+  height: 400px;
 }
 .ears {
-  margin: auto auto auto 80px;
+  margin: auto auto auto 120px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -284,6 +284,11 @@ main, footer {
 .icon img {
   padding: 20px;
 }
+@media (max-width:1000px) {
+  .icon {
+    grid-template-columns: auto auto;
+  }
+}
 
 
 .charity > p {
@@ -312,7 +317,7 @@ main, footer {
 
 .form {
   margin: auto;
-  width: 75%; 
+  width: 80%; 
   display: grid;
   grid-template-columns: 25% auto;
 }
@@ -348,8 +353,16 @@ form p {
     display: grid;
     grid-template-columns: 30% auto;
   }
+  .message {
+    grid-area: 3 / 1 / 4 / 3;
+    height: 40px;
+  }
+  form p {
+    grid-area: 5 / 1 / 6 / 3;
+  }
+
 }
-form > input {
+form  input {
   background: #444444;
   border: 1px solid #616161;
   box-sizing: border-box;
@@ -361,7 +374,19 @@ form > div input {
   text-transform: uppercase;
   font-size: 15px;
 }
-hr {
+.under-line {
   color: #565656;
-  width: 60%;
+  width: 74.5%;
+}
+.developer {
+  font-size: 10px;
+  color: #989898;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+}
+.del {
+  margin: 0;
 }
