@@ -1,5 +1,14 @@
+body {
+  margin: 0;
+  font-family: Open Sans Condensed;
+  font-weight: bold;
+}
+@font-face {
+  font-family: Open Sans Condensed;
+  src: url(OpenSans-CondLight.ttf);
+}
 header{
-  height: 1045px;
+  max-height: 1045px;
   overflow: hidden;
   background-image: url(Photo/Rectangle.png);
   display: grid;
@@ -44,9 +53,16 @@ header{
   justify-content: flex-end;
   max-height: 1045px;
 }
-.left-information img {
-width: 30%;
-
+#photo-contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-bottom: 86px;
+  margin-top: 0px;
+}
+#photo-contact img {
+  margin: 15px 0;
 }
 .left-information span {
   transform: rotate(-90deg);
@@ -57,13 +73,12 @@ width: 30%;
   white-space: nowrap;
 }
 .left-information hr {
-  position: relative;
-  top: 50px;
   color: white;
-  height: 100px;
+  height: 80px;
+  transform: rotate(-90deg);
 }
-.left-information img, span {
-  margin: 100px 0px;
+.left-information span {
+  margin: 80px ; 
 }
 .telephon {
   margin-top: 51px;
@@ -80,26 +95,57 @@ width: 30%;
   flex-direction: row;
   width: 80%;
 }
+@media (max-width:1000px) {
+  .header-content {
+    flex-direction: column;
+    margin-top: -20%;
+  }
+  .header-content .img-header > img {
+    margin-left: 100px;
+    margin-top: -10%;
+  }
+  .button-image {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+  }
+}
 .text-header {
   width: 60%;
   margin: 100px 100px;
   color: white;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  font-style: normal;
 }
-.header-content > div > button {
-  width: 112px;
-  height: 35px;
+.text-header .header-a {
+  margin: 0 0 100x 0;
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 87px;
+  font-weight: bold;
+}
+.header-content > div > a > button {
+  width: 160px;
+  height: 50px;
   background: #D1A954;
   color: white;
   border: none;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-top: 20px;
+  outline: none;
+}
+.header-content > div > a :hover {
+  background-color: rgb(173, 132, 42);
+  cursor: pointer;
 }
 .header-content .img-header > img {
-  height: 450px;
+  height: 490px;
   width: auto;
   box-shadow: 10px 10px 10px;
+  width: 350px;
 }
 #a {
   padding-right: 30px;
@@ -112,8 +158,9 @@ width: 30%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 70px;
+  height: 80px;
   align-items: center;
+  width: 350px;
 }
 .button-image button {
   background: inherit;
@@ -124,6 +171,11 @@ width: 30%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: white;
+  cursor: pointer;
+  outline: none;
+}
+.button-image button:active { 
+  color: #989898;
 }
 .button-image button img {
   width: 40px;
@@ -162,6 +214,7 @@ main, footer {
 .best-head {
   font-size: 18px;
 }
+
 #c {
   font-size: 18px;
 }
@@ -207,7 +260,7 @@ main, footer {
   position: absolute;
 }
 .d {
-  top: -80px;
+  top: 30px;
   left: 20px;
   color: white;
   letter-spacing: 0.05em;
@@ -216,7 +269,7 @@ main, footer {
 }
 .e {
   transform: rotate(-90deg);
-  bottom: -40px;
+  bottom: 80px;
   left: -10px;
   color: white;
   letter-spacing: 0.05em;
@@ -249,7 +302,7 @@ main, footer {
   height: 400px;
 }
 .ears {
-  margin: auto auto auto 40%;
+  margin: auto auto auto 50%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -278,6 +331,7 @@ main, footer {
   letter-spacing: 0.05em;
   font-size: 22px;
   margin-top: 10px;
+  margin-right: 50px;
 }
 .icon {
   display: grid;
@@ -300,6 +354,7 @@ main, footer {
   text-transform: uppercase;
   font-size: 30px;
   text-align: center;
+  margin-top: 0;
 }
 .charity p > span {
   color: #D1A954;
@@ -332,6 +387,7 @@ form {
 }
 .message {
   grid-area: 1 / 3 / 3 / 3;
+  outline: none;
 }
 form p {
   grid-area: 3 / 1 / 3 / 3;
@@ -340,11 +396,18 @@ form p {
 }
 .name, .company, .phone, .email {
   height: 30px;
+  outline: none;
 }
-.button {
-  width: 160px;
-  height: 40px;
+.cont-submit .button {
+  width: 190px;
+  height: 50px;
   padding: 0;
+  border-radius: 5px;
+  outline: none;
+}
+.cont-submit :hover {
+  background-color: rgb(173, 132, 42);
+  cursor: pointer;
 }
 .cont-submit {
   display: flex;
@@ -379,7 +442,10 @@ form > div input {
 }
 .under-line {
   color: #565656;
-  width: 74.5%;
+  width: 80%;
+  background-color: #565656;
+  border: none;
+  height: 1px;
 }
 .developer {
   font-size: 10px;
@@ -393,3 +459,4 @@ form > div input {
 .del {
   margin: 0;
 }
+
