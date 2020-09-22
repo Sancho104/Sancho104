@@ -80,6 +80,16 @@ but.onclick = function f1 ()  {
 
 
 
-
+let div5 = document.querySelector('.div5');         
+let butt = document.querySelector('.butt');
+butt.onclick = () => {
+  if (div5 = document.querySelector ('.div5b')) {
+    div5.classList.remove ('div5b');
+    div5.classList.add ('div5c');
+  }else  if(div5 = document.querySelector ('.div5c')) {
+    div5.classList.remove ('div5c');
+    div5.classList.add ('div5b');    
+  }
+}
 
 
