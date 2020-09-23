@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* размер и позиционирование header */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+/* установка необходимого размера иконки */
+.fa-jedi {
+  transform: scale(4);
+}
+/* позиционировании иконки */
+.fa-jedi {
+  position: relative;
+  left: 20px;
+}
+.header::before {
+  content: '';
+  background-color: aqua;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: 3;
+}
+/* позиционирование обьектов в header */
+.header_body {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+}
+/* скрытие значка меню при большом экране */
+.header_burger {
+  display: none;
+}
+/* иконка слева */
+.crap {
+  z-index: 5;
+}
+.header_menu {
+  overflow: auto;
+}
+
+.header_menu li {
+  list-style: none;
+  margin: 0 10px;
+  z-index: 3;
+}
+.header_menu a {
+  color: white;
+}
+
+.header_menu ul {
+  display: flex;
+  flex-direction: row;
+ 
+
+  /* адаптивность */
+}
+@media (max-width:767px) {   
+           /*запрет прокрутки при включённом меню  */
+  .lock {
+    overflow: hidden;
+  }
+  /* отображение иконки меню и её х-ки */
+  .header_burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+  }
+  /* средняя линия */
+  .header_burger span {
+    content: '';
+    width: 100%;
+    top: 9px;
+    height: 2px;
+    background-color :white;
+    position: absolute;
+    display: block;
+/* верхняя и нижния линиии */
+  }
+  .header_burger::before,
+  .header_burger::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s;
+
+  }
+  .header_burger::before {
+    bottom: 0;
+  }
+  .header_burger::after {
+    top: 0;
+  }
+/* позиционирование линий бургера при нажатии на иконку меню */
+  .active_burger::before {
+    transform: rotate(45deg);
+    top: 9px;
+    transition: all 0.3s;
+  }
+  
+  .active_burger::after {
+    transform: rotate(-45deg);
+    top: 9px;
+    transition: all 0.3s;
+
+  }
+  .active_burger span {
+    display: none;
+  }
+
+  /* позиция меню при его закрытии */
+  .header_menu {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: slateblue;
+    padding-top: 80px;
+    transition: top 0.5s;
+    overflow: auto;
+  }
+  /* позиция меню при его открытии */
+  .active_menu {
+    top: 0;
+    transition: top 0.5s;
+
+    /* размер header при адаптивности */
+  }
+  .header_body {
+    height: 50px;
+  }
+  /* размер иконки при адаптивости */
+  .crap {
+    transform: scale(0.75);
+  }
+  /* убирает flex */
+  .header_menu ul {
+    display: block;
+  
+  }
+  .header_menu li {
+    margin: 10px 0 0 20px;
+  }
+  .content {
+   padding-top: 0px;
+  }
+
+} 
+.container {
+ max-width: 1000px;
+ margin: 0 auto;
+ padding: 0 10px;
+}
+
+.content {
+  padding-top: 70px;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 25px;
+}
