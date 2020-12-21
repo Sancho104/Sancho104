@@ -1,0 +1,139 @@
+body {
+  box-sizing: border-box;
+}
+
+.head-container {
+  background-image: url("img/image 11.png");
+  background-size: auto;
+}
+
+.head {
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header {
+  position: fixed;
+  background-color: #131313;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.burger {
+  width: 100px;
+  height: 80px;
+}
+
+.logo {
+  margin: auto 20px auto 19px;
+}
+
+.logo img {
+  cursor: pointer;
+}
+
+.options {
+  margin: auto;
+  width: 323px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.options a {
+  text-decoration: none;
+  color: white;
+}
+
+.search {
+  margin: auto auto auto 0px;
+  width: auto;
+  height: 40px;
+}
+
+.search > input::placeholder {
+  color: black;
+}
+
+.search > input {
+  margin: auto;
+  width: 198px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding-left: 50px;
+}
+
+.search > i {
+  position: relative;
+  left: 40px;
+  top: 3px;
+  transform: scale(1.1);
+}
+
+.search i:hover {
+  color: blue;
+}
+
+.vertical-line-container {
+  margin: auto 20px;
+  height: 40px;
+}
+
+.vertical-line-container > .line {
+  width: 1px;
+  height: 40px;
+  background: #FFFFFF;
+  opacity: 0.15;
+  margin: auto;
+  border: none;
+}
+
+.account {
+  margin: auto;
+}
+
+.account > .signup {
+  color: #7FEFCF;
+  background: inherit;
+  border: none;
+  outline: none;
+}
+
+.account > .login {
+  color: white;
+  background: inherit;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 1420px) {
+  .options {
+    width: 250px;
+    margin: auto;
+  }
+
+  .vertical-line-container, .logo {
+    margin: auto;
+  }
+}
+@media (max-width: 850px) {
+  .options, .vertical-line-container, .search, .account {
+    display: none;
+  }
+
+  .logo {
+    height: 20%;
+    margin-right: 40%;
+  }
+}
+@media (max-width: 500px) {
+  .logo {
+    margin-right: 35%;
+  }
+}
+
+/*# sourceMappingURL=myStyle.css.map */
